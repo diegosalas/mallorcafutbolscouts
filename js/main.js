@@ -518,7 +518,8 @@ $(document).ready(function () {
         var parentli = $this.parent('li');
         parentli.siblings('li').removeClass('active');
         var videourl = $this.data('yt-video');
-        if(videoElement.data('current-video') !== videourl){
+        if(videoElement.data('current-video') ){
+            
             videoElement.html('<iframe src="https://www.youtube.com/embed/' + videourl + '" class="liveVideo" allowfullscreen=""></iframe>');
             videoElement.attr('data-current-video', videourl);
         }
